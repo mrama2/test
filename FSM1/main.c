@@ -39,9 +39,10 @@ int main(void)
 	}
 }
 	
+/* GPIO init function to initialize GPIO*/
 void GPIO_init()
 {
-		 LPC_GPIO1->FIODIR |= (1<<23);           /* Buzzer on PORT1.23 are output      */
+	 LPC_GPIO1->FIODIR |= (1<<23);           /* Buzzer on PORT1.23 are output      */
 	 LPC_GPIO1->FIODIR |= (1<<22);           /* Relay on PORT1.22 are output      */
 	 LPC_GPIO0->FIODIR |= (1<<0)| (1<<1) | (1<< 10) | (1<<11);           
 	 LPC_GPIO2->FIODIR      &= ~(1 << 11);    /* PORT2.11 defined as input       */	                                                                                                   // 1111 1111 1111 1111 1111 1111 1100 0011
