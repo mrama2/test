@@ -48,7 +48,7 @@ void GPIO_init()
 	 LPC_GPIO2->FIODIR      &= ~(1 << 11);    /* PORT2.11 defined as input       */	                                                                                                   // 1111 1111 1111 1111 1111 1111 1100 0011
    LPC_GPIO1->FIOPIN &= ~(1<<23);
 }
-
+/* This function is to get switch status*/
 int get_switch_status()
 {
 	return ((LPC_GPIO2->FIOPIN >> 11) & 0x01);
